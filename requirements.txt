@@ -1,0 +1,18 @@
+# Install a matching PyTorch build separately.
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.14.1
+scikit-learn==1.8.0
+sentence-transformers==5.6.0
+salesforce-merlion==2.0.0
+optuna==4.9.0
+matplotlib==3.9.3
+vus==0.0.6
+einops==0.8.0
+joblib==1.4.2
+tqdm==4.67.1
+requests==2.32.3
+ipython==8.30.0
+lightgbm==4.6.0
+h5py==3.14.0
+openpyxl==3.1.5

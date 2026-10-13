@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "kind": "semsphere_multi_dataset",
+  "study_name": "asd_dusk_full_5seed",
+  "nodes": 20,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "datasets": {
+    "ASD": {
+      "config": {
+        "dataset": "ASD",
+        "input_channels": 19,
+        "window_size": 64,
+        "time_step": 64,
+        "d_model": 32,
+        "tcn_layers": 2,
+        "attention_heads": 4,
+        "dropout": 0.2,
+        "score_alpha": 0.5,
+        "score_beta": 0.7,
+        "text_model": "intfloat/e5-base-v2",
+        "allow_hash_text_encoder": false,
+        "text_embedding_cache": true,
+        "text_cache_on_device": true,
+        "domain_text": "ASD is a multivariate application service monitoring dataset. Variables describe service-level runtime behavior, resource usage, and operational indicators. Normal behavior should preserve temporal regularity and cross-variable consistency.",
+        "variable_desc": {
+          "Channel-0": "ASD monitoring variable 0",
+          "Channel-1": "ASD monitoring variable 1",
+          "Channel-2": "ASD monitoring variable 2",
+          "Channel-3": "ASD monitoring variable 3",
+          "Channel-4": "ASD monitoring variable 4",
+          "Channel-5": "ASD monitoring variable 5",
+          "Channel-6": "ASD monitoring variable 6",
+          "Channel-7": "ASD monitoring variable 7",
+          "Channel-8": "ASD monitoring variable 8",
+          "Channel-9": "ASD monitoring variable 9",
+          "Channel-10": "ASD monitoring variable 10",
+          "Channel-11": "ASD monitoring variable 11",
+          "Channel-12": "ASD monitoring variable 12",
+          "Channel-13": "ASD monitoring variable 13",
+          "Channel-14": "ASD monitoring variable 14",
+          "Channel-15": "ASD monitoring variable 15",
+          "Channel-16": "ASD monitoring variable 16",
+          "Channel-17": "ASD monitoring variable 17",
+          "Channel-18": "ASD monitoring variable 18"
+        },
+        "anomaly_texts": [
+          "Anomaly pattern: an application service variable suddenly spikes or drops within a short window.",
+          "Anomaly pattern: a resource or workload indicator drifts away from its normal operating level.",
+          "Anomaly pattern: normally correlated service variables become inconsistent with each other.",
+          "Anomaly pattern: an expected periodic runtime pattern disappears or changes frequency.",
+          "Anomaly pattern: a previously smooth service variable becomes highly volatile with local bursts.",
+          "Anomaly pattern: multiple application indicators show conflicting runtime states."
+        ],
+        "project_dim": 32,
+        "oc_hidden_dim": null,
+        "oc_pooling": "flatten",
+        "center_eps": 0.1,
+        "center_normal_only": true,
+        "use_infonce": true,
+        "lambda_oc": 0.1,
+        "lambda_align": 0.07,
+        "lambda_anom": 0.1,
+        "lambda_recon": 0.0007,
+        "anomaly_similarity_margin": 0.2,
+        "num_epoch": 5,
+        "early_stop": 20,
+        "save_diagnostics": true,
+        "keep_checkpoints": true,
+        "beta1": 0.9,
+        "beta2": 0.99,
+        "lr": 0.0003,
+        "weight": 0.0005,
+        "batch_size": 128,
+        "drop_last": false,
+        "detect_nu": 0.0005,
+        "threshold_determine": "floating"
+      },
+      "entity_ids": [
+        "omi-1",
+        "omi-10",
+        "omi-11",
+        "omi-12",
+        "omi-2",
+        "omi-3",
+        "omi-4",
+        "omi-5",
+        "omi-6",
+        "omi-7",
+        "omi-8",
+        "omi-9"
+      ],
+      "data_sha256": {
+        "omi-10_test.pkl": "b1e863291de2eb4055e1d5f3604c6f6d2decf43469c60043f75901594a028ba5",
+        "omi-10_test_label.pkl": "de27986801e00b1bc3e3d3eb0029bdc474cd6ff60f364f06e016063c95820ff0",
+        "omi-10_train.pkl": "e9246eade89d4403c8fc86167e6b699f4d402d402b9f909d1845ede61306d069",
+        "omi-11_test.pkl": "0e0b38814d1ebc58f59e7e7ef3659f5dff196634dda39ea1c72422b1d6a6411d",
+        "omi-11_test_label.pkl": "8d7e9d6b230420e1823f4690382f15e926f27e073e6fc6f37f66a45a704a3c93",
+        "omi-11_train.pkl": "d7513b4542be462318bc556aacc2aa8b9bafca76776307802a5a92e042f9712f",
+        "omi-12_test.pkl": "3aacb6cf41bf528ad52ef0e66a3ec6304a7327b3ec6a8647dd907c6309591aec",
+        "omi-12_test_label.pkl": "0b2eda773f84ad5e90d81c27d97d2e7e14eee91674c1e3f50c78356b89932280",
+        "omi-12_train.pkl": "1edf92c214af95d01ed9d2cef8eb793e523dc51112ea377cc9a32c7fdb138fe3",
+        "omi-1_test.pkl": "8470b46f5483a247b28f8881276a5ead1fa1c4d2bf0febd0c143781b3dae9dce",
+        "omi-1_test_label.pkl": "a38fb9200b3c67f9152ab37763f7dfa6243ba8f875a0791c2854b9aec29b3f4a",
+        "omi-1_train.pkl": "176776de573bb6685b0484db26cb6945cda6269d8615fb0a4e0fcb61e4930c5e",
+        "omi-2_test.pkl": "3902ea5f55b2e0c227ce10b0e573f55aa66c560cd0486230f352b67a7b8c42c2",
+        "omi-2_test_label.pkl": "b024cb9e88b830b7ac35056d29118cefcaa47f0631235231ad35cb25a13bcd8e",
+        "omi-2_train.pkl": "ecf2182fb0f4d7f3d711f54fce47a0edc6d4aed8a8bcb02636c02d322786df92",
+        "omi-3_test.pkl": "e376cbbb7921571122e96731ef0d50f0ab9e496a04284190ecf2bd98ef9d7498",
+        "omi-3_test_label.pkl": "f214d1385109ba5959a975ac8ff54cafd7677ab275d595dbeb7fe44509c6ebbe",
+        "omi-3_train.pkl": "3bc3a65df047e6744942a07987aee705b46c39def10d522756a46aa086c12056",
+        "omi-4_test.pkl": "19408db860e01a8eef3e7d08e8f0f77992c33df7b8f1cdb0a26ccc1041ee1efb",
+        "omi-4_test_label.pkl": "1154391e1dec039b4c4cdb638225221b11249a1cb82871607b3d1507354ba9a0",
+        "omi-4_train.pkl": "c1c93eb2ad72f638ef1576016439b0a5e526066f860dfed58ae87f3d451f5ee0",
+        "omi-5_test.pkl": "8467ad99b109caa327c71cd3c5b8b806c65cec5ecf52d5d08f560d4874d55693",
+        "omi-5_test_label.pkl": "c9350625f60950552c2ea8d0ae9d8aa55b426ca52fc37d456bb44e01e0014442",
+        "omi-5_train.pkl": "983298e40a8c0099e58d0fb52cc540d5d93933b9f19e4512e33a17d7a57fa82c",
+        "omi-6_test.pkl": "93ca87503bd6f409dbc8f8d601440673046e3a78fea9e68eaa4ba881531ca689",
+        "omi-6_test_label.pkl": "801c411968a4dc16679643f169b4adbc9eec821850f61bda979317c848fd1d15",
+        "omi-6_train.pkl": "b85ef90bb408c0f1d20dea38fb9dfdf70606701902a678e1112fc28867728109",
+        "omi-7_test.pkl": "920b65b34e6cae56c9a7963a34f162cee5f18ddfd6d22147c5d8172806567eab",
+        "omi-7_test_label.pkl": "457d5e5b671d455f39fc058091e76697e3340ad6ebc294f8677f2b5bedaf9fc5",
+        "omi-7_train.pkl": "ee7dd0e30d9c15374ec7bfb5f7c69c641b22cccf605e42785cd533198ddd7f6f",
+        "omi-8_test.pkl": "4a9702830719defa0ff8c3930be9b952f8df33581dd7043ccda96a7c8e68d145",
+        "omi-8_test_label.pkl": "158d7e8fa82f6b48b1b531d60c9571a5ebdac86bd0130dfa1a3fd9be7362920a",
+        "omi-8_train.pkl": "b82250cb11e679ae8af2208bb738cf22d3c84fdae285cfa32d05afd6ff4af039",
+        "omi-9_test.pkl": "58e77c8fedee235073d44ec431f749ff1f49f34bb8b3ff6e3f1fabe064120c59",
+        "omi-9_test_label.pkl": "71d95db42211fa697b6631d860388e7096d92cba193f986dc1d8cd09d76103dc",
+        "omi-9_train.pkl": "e6e459f3de912262340cd0acba7827f6e1ee677c6344c9f4b7502b73bec4a612"
+      },
+      "data_root": "data/asd"
+    }
+  },
+  "num_workers": 0,
+  "jobs": [
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 0,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 1,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 2,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 4,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 5,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 6,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 7,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 8,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 9,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 10,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 11,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 0,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 1,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 2,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 4,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 5,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 6,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 7,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 8,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 9,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 10,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 11,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 0,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 1,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 2,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 4,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 5,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 6,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 7,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 8,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 9,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 10,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 11,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 0,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 1,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 2,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 4,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 5,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 6,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 7,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 8,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 9,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 10,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 11,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 0,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 1,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 2,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 4,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 5,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 6,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 7,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 8,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 9,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 10,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 11,
+      "cost": 1847853056
+    },
+    {
+      "dataset": "ASD",
+      "seed": 1,
+      "entity_index": 3,
+      "cost": 1573912576
+    },
+    {
+      "dataset": "ASD",
+      "seed": 2,
+      "entity_index": 3,
+      "cost": 1573912576
+    },
+    {
+      "dataset": "ASD",
+      "seed": 3,
+      "entity_index": 3,
+      "cost": 1573912576
+    },
+    {
+      "dataset": "ASD",
+      "seed": 4,
+      "entity_index": 3,
+      "cost": 1573912576
+    },
+    {
+      "dataset": "ASD",
+      "seed": 5,
+      "entity_index": 3,
+      "cost": 1573912576
+    }
+  ],
+  "source_sha256": {
+    "SemSphere_method.py": "07d400e4e36b52457f8c721ff6b8eb8b0523210f3cca63462adf1ad42f853039",
+    "experiments/cluster.py": "3ea060a6b4425f9dee79e86be0eb73c1d4a38358f421544a7037bd83d8eb536a",
+    "experiments/datasets.py": "386490ed173b980b6ffc96eb8dc03109be939424f1d3530ab5b6822770106d8a",
+    "experiments/cluster_results.py": "342158af137c3dc1ca1838bf6f4eacbac00b3d012b7b04d9ff1af348f0c6cdb9",
+    "experiments/kpi_data.py": "b8106c363c19009c2be12ccdaf09681767cd21166e5bd45783725b9a2edfa230",
+    "experiments/kpi_runtime.py": "28a67c5da1ffd9cc607d99a71596f0cd6c3511bc869212bb6dd02b3908c72291",
+    "experiments/kpi_cluster.py": "8c893fc5cc9243a32dd54fd487d01752cbab1eb5cc131211820bd07cabcf39a5",
+    "models/SemSphere/network/model.py": "6ae0e27f7db5e2ed5587bcf27a3b31843ef2bf45edd6a5f24c92d7b0f386cfc2",
+    "models/SemSphere/trainer/trainer.py": "1267d1a66658483df0894739f659ccb9d4a2d9f3e6e989a4bc7ef42812649d7e",
+    "models/SemSphere/trainer/early_stopping.py": "625f74a20246cd9739630ac44af62939c8763eabf175e3e63628e3e0bcb7fe28",
+    "dataloader/dataset.py": "2c7a7c8f58faa77ebdf23b1e214b88dc6f3269d1e631db66eb00542da01b6a8e",
+    "dataloader/data_preprocessing.py": "80ac4b04dc896db38516b8bb7c95ddc2b325fe1753033b1cf772a474a5eb1d7e",
+    "utils/ad_utils.py": "e8ca1665b0d245365ef49d90daaf78789e067a75e9cc9eaed722f0bed68f3120",
+    "models/anomaly_predict.py": "79296603fce1be55cb3320bc270d1be1f69cc72e0e043c36b38408507f8e4e1d",
+    "conf/semsphere/ASD_Configs.py": "a39e4b3445cf9f11cfea551def8eafcc283dabaa1d5f408c277fd7edad744c03",
+    "ts_datasets/ts_datasets/anomaly/asd.py": "aaf56f96bbba1f720773fa7bb4813e4700af8dd400280f05e5e132589c629e23"
+  },
+  "plan_id": "a6041ddef53c921c92af7f3647cdbd5561e8d9a5f0ee2211fb5b59fd0dde98ab"
+}
