@@ -17,13 +17,10 @@ embed/
 logs/
 scores/
 best_network/
-results/
-results_SemSphere_ablation/
-results_SemSphere_ablation_groups/
+results*/
 calculated/
 figures/
-optuna/semsphere_journals/
-sekar_journals/
+*_journals/
 *.db
 *.sqlite*
 *.pth

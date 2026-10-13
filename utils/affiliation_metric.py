@@ -35,10 +35,8 @@ class affiliation_accumulator:
         return {
             'precision': self.precision / self.cnt,
             'recall': self.recall / self.cnt,
-            # 'individual_precision_probabilities': self.individual_precision_probabilities / self.cnt,
-            # 'individual_recall_probabilities': self.individual_recall_probabilities / self.cnt,
-            # 'individual_precision_distances': self.individual_precision_distances / self.cnt,
-            # 'individual_recall_distances': self.individual_recall_distances / self.cnt
+
+
         }
 
 def tsad_affiliation(
@@ -82,11 +80,11 @@ if __name__ == '__main__':
     KPI_ts_nums = 29
     scores_affiliation = []
     for _ in range(KPI_ts_nums):
-        # 生成测试数据
+        
         true_test = np.random.randint(0, 2, 366)
         pred_test = np.random.randint(0, 2, 366)
 
-        # 计算affiliation metric
+        
         score_affiliation = tsad_affiliation(true_test, pred_test)
         scores_affiliation.append(score_affiliation)
 

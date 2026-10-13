@@ -409,7 +409,7 @@ def integral_mini_interval_Precall_CDFmethod(I, J, E):
     # \bar{F}_{t, recall}(d) = 1 - (1/|E|) * (min(d,m) + d)
     # Since t is a single-point here, and we are in the case where i_pivot is inside E.
     # The integral is then given by:
-    # C = \int_{t \in J} \bar{F}_{t, recall}(D(t)) dt
+    
     #   = \int_{t \in J} 1 - (1/|E|) * (min(d,m) + d) dt
     #   = |J| - (1/|E|) * [\int_{t \in J} (min(d,m) + d) dt]
     #   = |J| - (1/|E|) * out_integral_min_dm_plus_d    

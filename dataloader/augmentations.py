@@ -4,9 +4,8 @@ import torch
 
 def DataTransform(sample, config):
     weak_aug = scaling(sample, config.augmentation.scale_ratio)
-    # weak_aug = magnitude_warp(sample, config.augmentation.jitter_scale_ratio)
-    # strong_aug = jitter(permutation(sample, max_segments=config.augmentation.max_seg), config.augmentation.jitter_ratio)
-    # strong_aug = jitter(rotation(sample), config.augmentation.jitter_ratio)
+
+
     strong_aug = jitter(sample, config.augmentation.jitter_ratio)
 
     return weak_aug, strong_aug

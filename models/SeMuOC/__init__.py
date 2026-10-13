@@ -1,0 +1,1 @@
+"""SeMuOC anomaly detector."""

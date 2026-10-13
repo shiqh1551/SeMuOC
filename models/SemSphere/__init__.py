@@ -1,1 +1,0 @@
-"""SeKaP anomaly detector."""
